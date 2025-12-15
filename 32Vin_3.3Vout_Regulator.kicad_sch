@@ -1817,6 +1817,24 @@
 				(hide yes)
 			)
 		)
+		(property "MPN" "C780769"
+			(at 85.09 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Feeder" "8mm"
+			(at 85.09 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "77780897-1805-4eb0-a0f4-c4704e5c1f8d")
 		)
