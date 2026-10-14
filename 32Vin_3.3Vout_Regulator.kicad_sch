@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "1a1c72da-99f5-4976-b608-38ee505f2b67")
 	(paper "A5")
 	(title_block
@@ -13,7 +13,9 @@
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -80,19 +82,19 @@
 			)
 			(symbol "Conn_01x04_1_1"
 				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -113,8 +115,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -124,14 +126,14 @@
 					)
 				)
 				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
+					(start -1.27 -4.953)
+					(end 0 -5.207)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -207,9 +209,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -282,7 +287,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -294,7 +299,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -343,11 +348,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:L"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -414,32 +424,8 @@
 			)
 			(symbol "L_0_1"
 				(arc
-					(start 0 -2.54)
-					(mid 0.6323 -1.905)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 0.635)
+					(start 0 2.54)
+					(mid 0.6323 1.905)
 					(end 0 1.27)
 					(stroke
 						(width 0)
@@ -451,8 +437,32 @@
 				)
 				(arc
 					(start 0 1.27)
-					(mid 0.6323 1.905)
-					(end 0 2.54)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
 					(stroke
 						(width 0)
 						(type default)
@@ -500,9 +510,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -621,6 +634,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Regulator_Switching:AP63203WU"
 			(exclude_from_sim no)
@@ -701,17 +715,17 @@
 				)
 			)
 			(symbol "AP63203WU_1_1"
-				(pin input line
-					(at 10.16 -2.54 180)
+				(pin power_in line
+					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "FB"
+					(name "IN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -730,24 +744,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "IN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -809,13 +805,36 @@
 						)
 					)
 				)
+				(pin input line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -906,12 +925,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:PWR_FLAG"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1002,12 +1026,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1079,7 +1108,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1091,7 +1120,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1122,12 +1151,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VDC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1199,7 +1233,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1211,7 +1245,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1242,6 +1276,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(junction
@@ -1664,7 +1699,7 @@
 			(uuid "e87a546e-e52e-48e7-9764-e4021f26be1a")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "C2")
 					(unit 1)
@@ -1756,7 +1791,7 @@
 			(uuid "1dd85750-172c-4c17-a237-5c149152c821")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "J1")
 					(unit 1)
@@ -1854,7 +1889,7 @@
 			(uuid "8d2b969b-622e-41e5-b0cb-26501a0f695f")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "U1")
 					(unit 1)
@@ -1985,7 +2020,7 @@
 			(uuid "0f325fab-46d1-482a-a668-22df367271a5")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR02")
 					(unit 1)
@@ -2116,7 +2151,7 @@
 			(uuid "0021a88c-67af-4c62-8f8e-28e119968ada")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR08")
 					(unit 1)
@@ -2248,7 +2283,7 @@
 			(uuid "719f7ee9-0b96-4188-97ec-ae5a72a4f66c")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR01")
 					(unit 1)
@@ -2313,7 +2348,7 @@
 			(uuid "330561b1-e010-4236-81b4-e429c318ee00")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR05")
 					(unit 1)
@@ -2378,7 +2413,7 @@
 			(uuid "3bf89d2c-2541-4a7e-82bd-66b0cd436ecc")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR03")
 					(unit 1)
@@ -2464,7 +2499,7 @@
 			(uuid "4f45a34a-2cd2-498e-ad43-32651f501fd2")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "R1")
 					(unit 1)
@@ -2552,7 +2587,7 @@
 			(uuid "d1f353de-e681-43e0-952f-9e05f44df28d")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "C1")
 					(unit 1)
@@ -2640,7 +2675,7 @@
 			(uuid "a1e8f926-afa5-4800-93be-50cea240c46f")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "C3")
 					(unit 1)
@@ -2705,7 +2740,7 @@
 			(uuid "9cdf8a42-ba5c-4664-9961-9d37568c60c6")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR04")
 					(unit 1)
@@ -2835,7 +2870,7 @@
 			(uuid "4e40d70f-50ec-464f-ba97-da0afa42499f")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#PWR06")
 					(unit 1)
@@ -2910,7 +2945,7 @@
 			(uuid "d92f79c7-1417-4b24-9e00-000143bcc524")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#FLG01")
 					(unit 1)
@@ -2998,7 +3033,7 @@
 			(uuid "127ec8be-8006-428c-a4a0-9655d51b5143")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "C4")
 					(unit 1)
@@ -3084,7 +3119,7 @@
 			(uuid "18ef1e15-c966-452a-83e4-0c0b8f8ad3d3")
 		)
 		(instances
-			(project ""
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "L1")
 					(unit 1)
@@ -3151,7 +3186,7 @@
 			(uuid "89a08657-645b-422f-8868-dae8a6646a36")
 		)
 		(instances
-			(project "5Vin_3.3Vout_Regulator"
+			(project "32Vin_3.3Vout_Regulator"
 				(path "/1a1c72da-99f5-4976-b608-38ee505f2b67"
 					(reference "#FLG03")
 					(unit 1)
@@ -3164,4 +3199,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
